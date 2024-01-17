@@ -1,0 +1,72 @@
+:root {
+    /* initialise la police ne puissance de 10 (1rem = 10px, 2rem = 20px ...) */
+    font-size: 62.5%; 
+    /* variables de couleurs */
+    --colBackground: #d5e1ef;
+    --colTitle: #1e2e48;
+    --colText: #9da0a8;
+}
+
+/* importation de la police */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); 
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--colBackground);
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--colTitle);
+}
+main {
+    /* centre l'élément dans la page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    /* création du conteneur */
+    display: flex;
+    justify-content: center;
+    width: 19vw;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 20px;
+}
+h1, p {
+    text-align: center;
+    padding: 5px 10px;
+}
+.container p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--colText);
+}
+.container img {
+    border-radius: 10px;
+}
+
+/* Pour le format tablette */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .container {
+        width: 30vw;
+    }
+}
+
+/* Pour le format mobile */
+@media screen and (max-width: 426px) {
+    p {
+        font-size: 1.3rem;
+    }
+    .container {
+        width: 75vw;
+    }
+}
